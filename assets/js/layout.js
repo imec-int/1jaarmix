@@ -1,19 +1,32 @@
 // Robby
 
-var activeMenu = "#intro";
+var activeMenu = "intro";
+var menus = ["intro","projects","results","slides","callToAction"]
+var isScrollingToNext = false;
 
 /*
  Events
 */
 $("#menu a").click(function(event){
 	//event.preventDefault();
-	
+
 	/*$("#menu a").removeClass("menuItemActive");
 	$("#menu a").addClass("menuItem");
 	$(this).addClass("menuItemActive");*/
 	highlightMenuItem("#"+$(this).attr("id"));
-
+	activeMenu = $(this).attr("id");
 	scrollToPage($(this).attr("href"));
+	return false;
+});
+
+$("#next").click(function(event){
+
+	if(!isScrollingToNext && (activeMenu != "callToAction" || menus.indexOf(activeMenu) == -1) ){
+		activeMenu = menus[menus.indexOf(activeMenu)+1];
+		highlightMenuItem("#a_"+activeMenu);
+		scrollToPage("#"+activeMenu);
+		isScrollingToNext = true;
+	}
 	return false;
 });
 
@@ -30,12 +43,19 @@ function checkScroll(){
 		if(Math.abs(scrollFromTop - $(this).offset().top) < closestDistance){
 			var thisdiv = $(this).attr("id");
 			closest = "#a_"+thisdiv;
+			activeMenu = thisdiv;
 			closestDistance = Math.abs(scrollFromTop - $(this).offset().top);
 		}
 	});
 	if(closest){
-		//console.log(closest+" is smallest");
+		console.log(closest+" is smallest");
 		highlightMenuItem(closest);
+		if(closest == "#a_callToAction"){
+			$("#next").hide(100);
+		}else{
+			$("#next").show(100);
+		}
+
 	}
 }
 
@@ -81,6 +101,7 @@ function scrollToPage(pageId){
 	var offset = $(pageId).offset().top;
 	$('html, body').stop().animate({scrollTop: offset}, 400, function(){
 		window.location = pageId;
+		isScrollingToNext = false;
 	});
 	activeMenu = pageId;
 }

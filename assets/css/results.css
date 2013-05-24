@@ -2,3 +2,13 @@
 	Css voor d3 graphs
 	Kasper
 */
+#results {
+	height: 100%;
+}
+#vraag{
+	position: absolute;
+	top: 0px;
+	background-image: url('/assets/img/background.jpg');
+	height: 100%;
+	width: 50%;
+}

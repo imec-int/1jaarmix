@@ -379,5 +379,6 @@ function getQuerystring(key, default_)
   if(qs == null)
     return default_;
   else
+  	scrollToPage("#results");
     return qs[1];
 }

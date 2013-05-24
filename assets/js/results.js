@@ -338,16 +338,24 @@ function pollInit() {
 
 function nextPoll() {
 	pollindex++;
+	var totalHeight = $("#d3canvas").height();
+	 var heightScale = d3.scale.linear()
+      .domain([0, d3.max(polldata[pollindex].answers)])
+      .range([totalHeight*1, 0]); 
 	$("#stelling").text(polldata[pollindex].question);
 	var rects = svg.selectAll("rect")
 		.data(polldata[pollindex].answers);
 	var height = d3.scale.linear()
     	.domain([0, d3.max(polldata[pollindex].answers)])
-    	.range([0, $('#d3canvas').height()*0.8]);
-    rects.enter().append("rect")
-      .transition()
+    	.range([0, $('#d3canvas').height()]);
+    rects.transition()
     	.duration(750)
-    	.attr("height", height);
+    	.attr("y", function (d,i){
+        return heightScale(d);
+      })
+      	.attr("height", function (d,i){
+        	return totalHeight - heightScale(d);
+      });
     rects.exit().remove();	
 
 }

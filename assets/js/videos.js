@@ -10,7 +10,7 @@ Videos = {
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
 
-		return (elemBottom >= docViewTop);
+		return (elemBottom >= docViewTop && docViewTop + $(window).height() >= elemTop);
 	},
 
 	initIntroVideo: function(){

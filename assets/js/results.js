@@ -335,6 +335,8 @@ function pollInit() {
       .attr("class","shadow");
   rects.exit().remove();
 }
+
+
 function updatePoll(){
 	 var totalHeight = $("#d3canvas").height();
 	 var heightScale = d3.scale.linear()
@@ -358,6 +360,7 @@ function updatePoll(){
 
 function nextPoll() {
 	pollindex++;
+	if (pollindex == 15) {pollindex = 0;}
 	$("#stelling").text(polldata[pollindex].question);
 	updatePoll();
 	location.hash = "results?index="+pollindex+"";
@@ -365,6 +368,7 @@ function nextPoll() {
 }
 
 function prevPoll() {
+  if (pollindex == 0) {pollindex = 15;}
   pollindex--;
   $("#stelling").text(polldata[pollindex].question);
   updatePoll();

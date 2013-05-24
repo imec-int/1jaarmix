@@ -15,6 +15,20 @@ body{
 	background-color: #D8D4CF;
 }
 
+html{
+	height: 100%;
+}
+
+#container{
+	height: 500%;
+}
+
+
+/*
+	MENU
+*/
+
+
 #menu{
 	width: 160px;
 	background-color: #333;
@@ -48,4 +62,32 @@ body{
 	font-weight: bold;
 	font-size: 21px;
 	color: orange;
+}
+
+/*
+	DIVS
+*/
+
+.pageDiv{
+	height: 100%;
+}
+
+#intro{
+	background-color: green;
+}
+
+#projects{
+	background-color: blue;
+}
+
+#results{
+	background-color: red;
+}
+
+#slides{
+	background-color: yellow;
+}
+
+#callToAction{
+	background-color: silver;
 }

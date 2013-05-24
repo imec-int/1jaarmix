@@ -21,6 +21,13 @@ $(document).ready(function() {
 	//
 });
 
+
+// check scrolling
+// highlight menu items
+
+
+
+
 /*
  Makes DIVS full height
 */

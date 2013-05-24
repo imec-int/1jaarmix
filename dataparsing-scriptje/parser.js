@@ -19,6 +19,8 @@ parsePeople('../assets/data/questions.csv', function (err, people){
 
 	var mergedAnswers = mergePeopleToQuestions(questiondata, possibleanswers, people);
 
+	mergedAnswers = calculatePercentages(mergedAnswers);
+
 	console.log(mergedAnswers);
 
 	fs.writeFile('../assets/data/mergedanswers.json', JSON.stringify(mergedAnswers), function (err) {
@@ -109,6 +111,19 @@ function mergePeopleToQuestions(questiondata, possibleanswers, people){
 				questionWithAnswers.answers[answerkey]++;
 				questionWithAnswers.totalanswers++; // kan handig zijn voor de kasper z'n d3
 			}
+		}
+	}
+
+	return mergedAnswers;
+}
+
+function calculatePercentages(mergedAnswers){
+	for(var i in mergedAnswers){
+		var question = mergedAnswers[i];
+
+		question.answerspercentage = {};
+		for(var answerkey in question.answers){
+			question.answerspercentage[answerkey] = question.answers[answerkey]*100 / question.totalanswers;
 		}
 	}
 

@@ -315,13 +315,17 @@ function pollInit() {
 		.data(polldata[0].answers);
 	var height = d3.scale.linear()
     	.domain([0, d3.max(polldata[0].answers)])
-    	.range([0, -$('#d3canvas').height()]);
+    	.range([0, $('#d3canvas').height()*0.8]);
 	rects.enter().append("rect")
-		.attr("x", function(d,i) {return i*100;})
-		.attr("y", $('#d3canvas').height() )
-	    .attr("height", height)
+	    .attr("rx", 6)
+    	.attr("ry", 6)
+		.attr("x", function(d,i) {return i*100})
+		.attr("height", height)
+		.attr("y", function(d,i) {$('#d3canvas').height()-parseInt(height(d).replace(/px/, ""))
+					})
 	    .attr("width", 50)
-	    .attr("class","rect");
+	    .attr("fill", "#E40473")
+	    .attr("class","shadow");
 	rects.exit().remove();	
 
 

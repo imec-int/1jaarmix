@@ -321,8 +321,8 @@ function pollInit() {
     	.attr("ry", 6)
 		.attr("x", function(d,i) {return i*100})
 		.attr("height", height)
-		.attr("y", function(d,i) {$('#d3canvas').height()-parseInt(height(d).replace(/px/, ""))
-					})
+		// .attr("y", function(d,i) {$('#d3canvas').height()-parseInt(height(d).replace(/px/, ""))
+		// 			})
 	    .attr("width", 50)
 	    .attr("fill", "#E40473")
 	    .attr("class","shadow");
@@ -334,12 +334,18 @@ function pollInit() {
 function nextPoll() {
 	pollindex++;
 	$("#stelling").text(polldata[pollindex].question);
-	var rects = svg.selectAll('rect');
-	rects.style("fill","steelblue");
-	rects.attr('x', pollindex*10+'px');
-	rects.attr('width','100px');
-	rects.attr('height','200px');
-	console.log(polldata[pollindex].answerspercentage[0]);
+	var rects = svg.selectAll("rect")
+		.data(polldata[pollindex].answers);
+	var height = d3.scale.linear()
+    	.domain([0, d3.max(polldata[pollindex].answers)])
+    	.range([0, $('#d3canvas').height()*0.8]);
+    rects.enter().append("rect")
+      .transition()
+    	.duration(750)
+    	.attr("height", height);
+    rects.exit().remove();	
+
+
 	
 }
 

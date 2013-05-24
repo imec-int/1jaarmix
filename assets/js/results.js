@@ -335,14 +335,11 @@ function pollInit() {
       .attr("class","shadow");
   rects.exit().remove();
 }
-
-function nextPoll() {
-	pollindex++;
-	var totalHeight = $("#d3canvas").height();
+function updatePoll(){
+	 var totalHeight = $("#d3canvas").height();
 	 var heightScale = d3.scale.linear()
       .domain([0, d3.max(polldata[pollindex].answers)])
       .range([totalHeight*1, 0]); 
-	$("#stelling").text(polldata[pollindex].question);
 	var rects = svg.selectAll("rect")
 		.data(polldata[pollindex].answers);
 	var height = d3.scale.linear()
@@ -351,19 +348,25 @@ function nextPoll() {
     rects.transition()
     	.duration(750)
     	.attr("y", function (d,i){
-        return heightScale(d);
-      })
+        	return heightScale(d);
+      	})
       	.attr("height", function (d,i){
         	return totalHeight - heightScale(d);
-      });
+      	});
     rects.exit().remove();	
+}
+
+function nextPoll() {
+	pollindex++;
+	$("#stelling").text(polldata[pollindex].question);
+	updatePoll();
 
 }
 
 function prevPoll() {
   pollindex--;
   $("#stelling").text(polldata[pollindex].question);
-  console.log(pollindex);
+  updatePoll();
 
 }
 

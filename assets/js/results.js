@@ -311,10 +311,10 @@ function pollInit() {
 	pollindex = 0;
 	svg = d3.select("svg");
 	var rects = svg.selectAll("rect")
-		.data(polldata);
+		.data(polldata[0].answers);
 	rects.enter().append("rect")
-		.attr("x", function(d,i) {i*100})
-	    .attr("height", function(d,i) {return d[i].answers["Helemaal Eens"]})
+		.attr("x", function(d,i) {return i*100})
+	    .attr("height", function(d,i) {console.log(d[i]*100); return i*100;})
 	    .attr("width", 50)
 	    .attr("class","rect");
 	rects.exit().remove();	

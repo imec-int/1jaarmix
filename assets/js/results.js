@@ -360,6 +360,7 @@ function nextPoll() {
 	pollindex++;
 	$("#stelling").text(polldata[pollindex].question);
 	updatePoll();
+	location.hash = "results?index="+pollindex+"";
 
 }
 
@@ -367,6 +368,7 @@ function prevPoll() {
   pollindex--;
   $("#stelling").text(polldata[pollindex].question);
   updatePoll();
+  location.hash = "results?index="+pollindex+"";
 
 }
 

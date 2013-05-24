@@ -64,6 +64,25 @@ html{
 	color: orange;
 }
 
+/* Advanced menu for bigger screens */
+@media all and (min-height: 480px){
+
+}
+
+/* No menu for small mobile devices */
+@media all and (max-height: 480px){
+	#menu{
+		display: none;
+	}
+}
+
+@media print{
+	#menu{
+		display: none;
+	}
+}
+
+
 /*
 	DIVS
 */

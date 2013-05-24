@@ -22,15 +22,19 @@ $("#menu a").click(function(event){
 $("#next").click(function(event){
 
 	if(!isScrollingToNext && (activeMenu != "callToAction" || menus.indexOf(activeMenu) == -1) ){
+		//console.log(activeMenu+ " - " + menus.indexOf(activeMenu));
+		activeMenu = activeMenu.replace("#","");
 		activeMenu = menus[menus.indexOf(activeMenu)+1];
 		highlightMenuItem("#a_"+activeMenu);
 		scrollToPage("#"+activeMenu);
 		isScrollingToNext = true;
+
+		//console.log(activeMenu);
 	}
 	return false;
 });
 
-var scroller=self.setInterval(function(){checkScroll()},800);
+var scroller=self.setInterval(function(){checkScroll()},400);
 
 function checkScroll(){
 	var scrollFromTop = $(this).scrollTop();

@@ -91,6 +91,7 @@ html{
 	DIVS
 */
 
+
 .pageDiv{
 	height: 100%;
 }
@@ -119,12 +120,18 @@ html{
 .verticalFloater{
 	height: 10%;
 }
+
+
+
 /*
 	Intro
 */
 #intromovie{
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 /*
 	Projects
@@ -160,9 +167,19 @@ html{
 		height: 160px;
 	}
 }
-@media all and (max-height: 550px) {
+@media all and (max-width: 650px) {
 	.projectMovie{
-		height: 100px;
+		float: left;
+		width: 90%;
+	}
+	#projects{
+		height: 2100px;
+	}
+	.verticalFloater{
+		height: 0%;
+	}
+	.projectMovie{
+		height: 240px;
 	}
 }
 

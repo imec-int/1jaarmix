@@ -1,5 +1,5 @@
 var pollindex = 0;
-var polldata = 
+var polldata =
   [
   {
     "question": "Over 10 jaar kijkt men alleen nog maar on-demand of uitgesteld naar televisie.",
@@ -303,50 +303,57 @@ var polldata =
   }
 ];
 //console.log(polldata[0].question);
-pollInit();
+$(pollInit); // laden als de pagina geladen is
 
 
 function pollInit() {
-	$("#stelling").text(polldata[pollindex].question);
-	pollindex = 0;
-	svg = d3.select("svg");
+  $("#stelling").text(polldata[pollindex].question);
+  pollindex = 0;
+  svg = d3.select("svg");
 
-	var rects = svg.selectAll("rect")
-		.data(polldata[0].answers);
-	var height = d3.scale.linear()
-    	.domain([0, d3.max(polldata[0].answers)])
-    	.range([0, $('#d3canvas').height()*0.8]);
-	rects.enter().append("rect")
-	    .attr("rx", 6)
-    	.attr("ry", 6)
-		.attr("x", function(d,i) {return i*100})
-		.attr("height", height)
-		.attr("y", function(d,i) {$('#d3canvas').height()-parseInt(height(d).replace(/px/, ""))
-					})
-	    .attr("width", 50)
-	    .attr("fill", "#E40473")
-	    .attr("class","shadow");
-	rects.exit().remove();	
+  var totalHeight = $(window).height(); //in Firefox is dat toch 0 hoor
 
+  var rects = svg.selectAll("rect")
+    .data(polldata[0].answers);
 
+  var heightScale = d3.scale.linear()
+      .domain([0, d3.max(polldata[0].answers)])
+      .range([totalHeight*0.8, 0]); //omgedraaid
+
+  rects.enter().append("rect")
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", function (d,i){
+        return i*100;
+      })
+      .attr("y", function (d,i){
+        return heightScale(d);
+      })
+      .attr("height", function (d,i){
+        return totalHeight - heightScale(d);
+      })
+      .attr("width", 50)
+      .attr("fill", "#E40473")
+      .attr("class","shadow");
+  rects.exit().remove();
 }
 
 function nextPoll() {
-	pollindex++;
-	$("#stelling").text(polldata[pollindex].question);
-	var rects = svg.selectAll('rect');
-	rects.style("fill","steelblue");
-	rects.attr('x', pollindex*10+'px');
-	rects.attr('width','100px');
-	rects.attr('height','200px');
-	console.log(polldata[pollindex].answerspercentage[0]);
-	
+  pollindex++;
+  $("#stelling").text(polldata[pollindex].question);
+  var rects = svg.selectAll('rect');
+  rects.style("fill","steelblue");
+  rects.attr('x', pollindex*10+'px');
+  rects.attr('width','100px');
+  rects.attr('height','200px');
+  console.log(polldata[pollindex].answerspercentage[0]);
+
 }
 
 function prevPoll() {
-	pollindex--;
-	$("#stelling").text(polldata[pollindex].question);
-	console.log(pollindex);
-	
+  pollindex--;
+  $("#stelling").text(polldata[pollindex].question);
+  console.log(pollindex);
+
 }
 

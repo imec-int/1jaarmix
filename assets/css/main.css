@@ -3,3 +3,14 @@
 	Robby 
 	(don't fuck it up)
 */
+
+*{
+	padding:0;
+	margin:0;
+}
+
+#container{
+	height: 100%;
+	width: 100%;
+	background-color: #D8D4CF;
+}

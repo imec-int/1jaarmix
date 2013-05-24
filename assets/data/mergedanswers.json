@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Over 10 jaar kijkt men alleen nog maar on-demand of uitgesteld naar televisie.",
+    "category": "Content",
+    "answers": {
+      "Helemaal Oneens": 13,
+      "Oneens": 30,
+      "Neutraal": 5,
+      "Eens": 29,
+      "Helemaal Eens": 20
+    },
+    "totalanswers": 97
+  },
+  {
+    "question": "Als de media niet innoveert in Vlaanderen kijken we straks enkel naar buitenlandse content.",
+    "category": "Content",
+    "answers": {
+      "Helemaal Oneens": 4,
+      "Oneens": 41,
+      "Neutraal": 2,
+      "Eens": 46,
+      "Helemaal Eens": 22
+    },
+    "totalanswers": 115
+  },
+  {
+    "question": "Het mediabedrijf van de toekomst covert elk medium.",
+    "category": "Content",
+    "answers": {
+      "Helemaal Oneens": 19,
+      "Oneens": 34,
+      "Neutraal": 7,
+      "Eens": 20,
+      "Helemaal Eens": 31
+    },
+    "totalanswers": 111
+  },
+  {
+    "question": "Content aggregeren is een overbodige schakel in de waardeketen van media geworden.",
+    "category": "Content",
+    "answers": {
+      "Helemaal Oneens": 36,
+      "Oneens": 48,
+      "Neutraal": 8,
+      "Eens": 18,
+      "Helemaal Eens": 4
+    },
+    "totalanswers": 114
+  },
+  {
+    "question": "Journalistiek zal volautomatisch worden: content wordt gemaakt door algoritmes.",
+    "category": "Content",
+    "answers": {
+      "Helemaal Oneens": 58,
+      "Oneens": 45,
+      "Neutraal": 2,
+      "Eens": 9,
+      "Helemaal Eens": 2
+    },
+    "totalanswers": 116
+  },
+  {
+    "question": "Het doorspoelen of vermijden van reclame moet betalend worden.",
+    "category": "Geld",
+    "answers": {
+      "Helemaal Oneens": 29,
+      "Oneens": 7,
+      "Neutraal": 3,
+      "Eens": 15,
+      "Helemaal Eens": 2
+    },
+    "totalanswers": 56
+  },
+  {
+    "question": "Binnenkort zit alle kwaliteitscontent onherroepelijk achter een betaalmuur.",
+    "category": "Geld",
+    "answers": {
+      "Helemaal Oneens": 14,
+      "Oneens": 34,
+      "Neutraal": 7,
+      "Eens": 34,
+      "Helemaal Eens": 12
+    },
+    "totalanswers": 101
+  },
+  {
+    "question": "Vergelijkbare ROI cijfers over alle media heen zijn een must voor de mediasector.",
+    "category": "Geld",
+    "answers": {
+      "Helemaal Oneens": 7,
+      "Oneens": 14,
+      "Neutraal": 16,
+      "Eens": 38,
+      "Helemaal Eens": 32
+    },
+    "totalanswers": 107
+  },
+  {
+    "question": "Vergelijkbare ROI cijfers over alle media heen zijn een must voor de mediasector.",
+    "category": "Geld",
+    "answers": {
+      "Helemaal Oneens": 4,
+      "Oneens": 23,
+      "Neutraal": 29,
+      "Eens": 36,
+      "Helemaal Eens": 18
+    },
+    "totalanswers": 110
+  },
+  {
+    "question": "Targeted advertenties zijn de redding van het advertentiemodel.",
+    "category": "Geld",
+    "answers": {
+      "Helemaal Oneens": 5,
+      "Oneens": 20,
+      "Neutraal": 13,
+      "Eens": 49,
+      "Helemaal Eens": 20
+    },
+    "totalanswers": 107
+  },
+  {
+    "question": "Net zoals de iPad wordt Google Glass de norm binnen de drie jaar.",
+    "category": "Innovatie",
+    "answers": {
+      "Helemaal Oneens": 1,
+      "Oneens": 8,
+      "Neutraal": 3,
+      "Eens": 3,
+      "Helemaal Eens": 4
+    },
+    "totalanswers": 19
+  },
+  {
+    "question": "De mediabedrijven moeten meer samenwerken om gecombineerde producten te maken.",
+    "category": "Innovatie",
+    "answers": {
+      "Helemaal Oneens": 1,
+      "Oneens": 8,
+      "Neutraal": 11,
+      "Eens": 35,
+      "Helemaal Eens": 31
+    },
+    "totalanswers": 86
+  },
+  {
+    "question": "Echte innovatie zit in de hardware, software zal altijd volgen.",
+    "category": "Innovatie",
+    "answers": {
+      "Helemaal Oneens": 44,
+      "Oneens": 32,
+      "Neutraal": 11,
+      "Eens": 9,
+      "Helemaal Eens": 6
+    },
+    "totalanswers": 102
+  },
+  {
+    "question": "De strenge Europese privacy wetgeving is een competitief nadeel voor innovatie.",
+    "category": "Innovatie",
+    "answers": {
+      "Helemaal Oneens": 18,
+      "Oneens": 34,
+      "Neutraal": 6,
+      "Eens": 20,
+      "Helemaal Eens": 20
+    },
+    "totalanswers": 98
+  },
+  {
+    "question": "De overheid moet reguleren hoe distributeurs en omroepen kunnen samenwerken.",
+    "category": "Innovatie",
+    "answers": {
+      "Helemaal Oneens": 31,
+      "Oneens": 33,
+      "Neutraal": 9,
+      "Eens": 18,
+      "Helemaal Eens": 9
+    },
+    "totalanswers": 100
+  }
+]

@@ -310,7 +310,7 @@ function pollInit() {
   $("#stelling").text(polldata[pollindex].question);
   pollindex = 0;
   svg = d3.select("svg");
-  var totalHeight = $(window).height(); //in Firefox is dat toch 0 hoor
+  var totalHeight = $("#d3canvas").height(); //in Firefox is dat toch 0 hoor
   var rects = svg.selectAll("rect")
     .data(polldata[0].answers);
 

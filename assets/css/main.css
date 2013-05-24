@@ -88,6 +88,35 @@ html{
 
 
 /*
+	Next
+*/
+#next{
+	width: 160px;
+	background-color: #333;
+	padding: 10px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	opacity: 0.9;
+	
+	
+	
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+
+#next a{
+	color:white;
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+/*
 	DIVS
 */
 
@@ -120,7 +149,6 @@ html{
 .verticalFloater{
 	height: 10%;
 }
-
 
 
 /*

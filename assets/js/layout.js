@@ -25,7 +25,7 @@ function checkScroll(){
 	var closest;
 	var closestDistance = Infinity;
 	$(".pageDiv").each(function(){
-		console.log($(this).attr("id") + " - " + Math.abs(scrollFromTop - $(this).offset().top) + " - " + closestDistance);
+		//console.log($(this).attr("id") + " - " + Math.abs(scrollFromTop - $(this).offset().top) + " - " + closestDistance);
 
 		if(Math.abs(scrollFromTop - $(this).offset().top) < closestDistance){
 			var thisdiv = $(this).attr("id");
@@ -34,8 +34,7 @@ function checkScroll(){
 		}
 	});
 	if(closest){
-		//closest = $()
-		console.log(closest+" is smallest");
+		//console.log(closest+" is smallest");
 		highlightMenuItem(closest);
 	}
 }

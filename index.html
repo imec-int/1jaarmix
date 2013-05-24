@@ -56,10 +56,20 @@
 
       <div class="pageDiv" id="results">
               <div id="vraag">
-                <h1>Is het een vliegtuig? of is het een vogel? of is het dat niet?</h1>
+                <h1 id="stelling">Is het een vliegtuig? of is het een vogel? of is het dat niet?</h1>
+                <button onClick="nextPoll();">next</button>
+                <button onClick="prevPoll();">prev</button>
               </div>
-              <div id="resultaat"></div>
-              <button>next</button>
+              <div id="resultaat">
+                  <svg id="d3canvas">
+                    <rect id="HO"></rect>
+                    <rect id="O"></rect>
+                    <rect id="N"></rect>
+                    <rect id="E"></rect>
+                    <rect id="HE"></rect>
+                  </svg>
+              </div>
+
         <div id="social">
             <div class="fb">
               <div class="fb-like" data-href="http://startmixing.be/vraag1.html" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="lucida grande"></div>
@@ -81,13 +91,13 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="assets/vendor/date/date.js"></script>
     <script src="//a.vimeocdn.com/js/froogaloop2.min.js"></script>
-    <script src="assets/js/d3.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     
     <!-- js files-->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/results.js"></script>
     <script src="assets/js/layout.js"></script>
-	<script src="assets/js/videos.js"></script>
+	  <script src="assets/js/videos.js"></script>
 
     <!-- Google plus button load asynchrounasly -->
     <script type="text/javascript">

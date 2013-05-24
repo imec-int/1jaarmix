@@ -1,6 +1,6 @@
-/*   
+/*
 	Css voor global layout
-	Robby 
+	Robby
 	(don't fuck it up)
 */
 
@@ -48,7 +48,7 @@ html{
 #menu li{
 	list-style: none;
 	margin-left: 8px;
-	margin: 6px; 
+	margin: 6px;
 }
 
 .menuItem{
@@ -100,9 +100,9 @@ html{
 	bottom: 0;
 	right: 10px;
 	opacity: 0.9;
-	
-	
-	
+
+
+
 	transform:rotate(90deg);
 	-ms-transform:rotate(90deg); /* IE 9 */
 	-webkit-transform:rotate(90deg); /* Safari and Chrome */
@@ -177,7 +177,7 @@ html{
 }
 
 .projectMovie h3{
-	
+
 }
 
 .projectMovie iframe{
@@ -208,6 +208,14 @@ html{
 	}
 	.projectMovie{
 		height: 240px;
+	}
+}
+
+/* iPhone CSS rules here */
+@media only screen and (max-device-width: 480px) {
+	#intromovie{
+		width: auto;
+		height: auto;
 	}
 }
 

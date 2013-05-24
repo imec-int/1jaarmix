@@ -215,6 +215,10 @@ html{
 	Results
 */
 
+#d3canvas{
+	width: 50%;
+}
+
 #results {
 	background-image: url('/assets/img/background.jpg');
 	height: 100%;
@@ -224,6 +228,7 @@ html{
 	background-color: rgba(0,0,0,0.2);
 	width: 50%;
 	height: 100%;
+	float: left;
 }
 #vraag h1 {
 	font-family: 'Merriweather Sans', sans-serif;
@@ -235,4 +240,5 @@ html{
 	background-color: rgba(0,0,0,0.6);
 	width: 50%;
 	height: 100%;
+	float: left;
 }

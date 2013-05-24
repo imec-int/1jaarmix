@@ -310,11 +310,16 @@ function pollInit() {
 	$("#stelling").text(polldata[pollindex].question);
 	pollindex = 0;
 	svg = d3.select("svg");
+
 	var rects = svg.selectAll("rect")
 		.data(polldata[0].answers);
+	var height = d3.scale.linear()
+    	.domain([0, d3.max(polldata[0].answers)])
+    	.range([0, -$('#d3canvas').height()]);
 	rects.enter().append("rect")
-		.attr("x", function(d,i) {return i*100})
-	    .attr("height", function(d,i) {console.log(d[i]*100); return i*100;})
+		.attr("x", function(d,i) {return i*100;})
+		.attr("y", $('#d3canvas').height() )
+	    .attr("height", height)
 	    .attr("width", 50)
 	    .attr("class","rect");
 	rects.exit().remove();	

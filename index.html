@@ -15,17 +15,26 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/results.css" />
     <!-- Fav and touch icons -->
+    <!-- line up share buttons from 
+     http://stackoverflow.com/questions/10337334/how-to-align-facebook-twitter-google-and-linkedin-buttons-on-the-right
+     -->
+    <style>
+      .social{
+        float:right;
+        border:solid 1px green;
+      }
+     .fb, .twit, .share, .gplus{
+        float:left;
+        width:100px;
+        height:100px;
+        overflow:hidden;
+        border-left:solid 1px red;
+      }
+    </style>
   </head>
 
   <body>
   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
     <div id="container">
       <div id="menu">
@@ -44,12 +53,20 @@
               <div id="vraag"></div>
               <div id="resultaat"></div>
               <button>next</button>
-        <div id="social"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://startmixing.be/vraag1.html" data-text="Wie is de snelste coder van MiX?" data-via="mixbe" data-lang="nl" data-related="mixbe" data-hashtags="1jaarmix">Tweeten</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-        <g:plusone></g:plusone>
-
-        <div class="fb-like" data-href="http://startmixing.be/vraag1.html" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
+        <div id="social">
+            <div class="fb">
+              FB
+              <div class="fb-like" data-href="http://startmixing.be/vraag1.html" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
+            </div>
+            <div class="twit">
+            TWIT
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://startmixing.be/vraag1.html" data-text="Wie is de snelste coder van MiX?" data-via="mixbe" data-lang="nl" data-related="mixbe" data-hashtags="1jaarmix">Tweeten</a>
+            </div>
+            <div class="share">Share</div>
+           <div class="gplus">
+           Gp
+             <g:plusone></g:plusone>
+           </div>
       </div>
     </div>
       <div class="pageDiv" id="slides">&#160;</div>
@@ -62,7 +79,7 @@
     <script src="assets/vendor/date/date.js"></script>
     
     <!-- js files-->
-    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/main.js"></script>
     
     <!-- Google plus button load asynchrounasly -->
     <script type="text/javascript">
@@ -76,6 +93,16 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
       })();
     </script>
-
+    <!-- Javascript for the tweet button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- Javascript for Facebook like buttons -->
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+   </script>
   </body>
 </html>

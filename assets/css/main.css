@@ -20,7 +20,7 @@ html{
 }
 
 #container{
-	height: 500%;
+	height: 100%;
 }
 
 
@@ -35,7 +35,7 @@ html{
 	padding: 10px;
 	padding-bottom: 15px;
 	padding-top: 15px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 10px;
 }

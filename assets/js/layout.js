@@ -48,7 +48,7 @@ function checkScroll(){
 		}
 	});
 	if(closest){
-		console.log(closest+" is smallest");
+		//console.log(closest+" is smallest");
 		highlightMenuItem(closest);
 		if(closest == "#a_callToAction"){
 			$("#next").hide(100);

@@ -2,6 +2,7 @@
 Videos = {
 	pageloaded: function(){
 		Videos.initIntroVideo();
+		Videos.initProjectVideos();
 	},
 
 	isScrolledIntoView: function(elem){
@@ -25,7 +26,6 @@ Videos = {
 		// on finish scroll to next div
 		function onFinish(id){
 			// scroll to next div
-			console.log('end');
 			var offset = $("#projects").offset().top;
 			$('html, body').stop().animate({scrollTop: offset}, 400);
 		}
@@ -34,6 +34,33 @@ Videos = {
 		function onPlayProgress(data, id){
 			if(!Videos.isScrolledIntoView($("#intro")[0])){
 				player.api('pause');
+			}
+		}
+	},
+
+	initProjectVideos: function(){
+		var iframes = $(".projectMovie").children('iframe');
+		iframes.each(function(index, iframe){
+			var player = $f(iframe.id);
+			player.addEvent('ready', function(){
+				player.addEvent('finish', onFinish);
+				player.addEvent('playProgress', onPlayProgress);
+			});
+		});
+
+		function onFinish(id){
+			// start next
+			var nextVideo = $('#' + id).parent().next().children('iframe');
+			// if it's not the last video, start playing the next one
+			if(nextVideo && nextVideo.length !== 0) {
+				$f(nextVideo[0]).api('play');
+			}
+		}
+
+		function onPlayProgress(data, id){
+			var elem = $('#' + id);
+			if(!Videos.isScrolledIntoView(elem)) {
+				$f(elem[0]).api('pause');
 			}
 		}
 	}

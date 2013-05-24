@@ -12,11 +12,13 @@
 body{
 	height: 100%;
 	width: 100%;
-	background-color: #D8D4CF;
-	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+	/*background-color: #D8D4CF;*/
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
              "Helvetica Neue", sans-serif;
-	font-weight: 300;*/
-	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 300;
+	/*font-family: 'Merriweather Sans', sans-serif;*/
+	background-image: url('/assets/img/background.jpg');
+	background-repeat: repeat-y;
 }
 
 html{
@@ -126,24 +128,20 @@ html{
 }
 
 #intro{
-	background-color: #D8C2AC;
+	background-color: rgba(0,0,0,0.15);
 }
 
 #projects{
-	background-color: #B9C2D8;
-	/*padding: 100px;*/
+	background-color: rgba(0,0,0,0.25);
 }
 
-#results{
-	background-color: #AFD8D5;
-}
 
 #slides{
-	background-color: #A3D8B2;
+	background-color: rgba(0,0,0,0.15);
 }
 
 #callToAction{
-	background-color: #BED891;
+	background-color: rgba(0,0,0,0.25);
 }
 
 .verticalFloater{
@@ -239,12 +237,12 @@ html{
 	float: left;
 }
 #vraag h1 {
-	font-family: 'Merriweather Sans', sans-serif;
-	padding: 20px;
+	/*font-family: 'Merriweather Sans', sans-serif;*/
+	padding: 30px;
 	padding-left: 30px;
-    font-size: 42px;
-    font-weight: 100;
-    width: 70%;
+    font-size: 44px;
+    font-weight: normal;
+    width: 60%;
     color: white;
     margin-left: auto;
     margin-right: auto;

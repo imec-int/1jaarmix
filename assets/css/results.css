@@ -3,16 +3,16 @@
 	Kasper
 */
 #results {
-	height: 100%;
-}
-#vraag{
 	position: absolute;
 	top: 0px;
 	background-image: url('/assets/img/background.jpg');
 	height: 100%;
-	width: 50%;
+	width: 100%;
 }
 
+#vraag{
+	background-color: rgba(0,0,0,0.2);
+}
 #vraag h1 {
 	font-family: 'Merriweather Sans', sans-serif;
     font-size: 48px;

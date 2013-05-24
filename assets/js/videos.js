@@ -25,6 +25,10 @@ Videos = {
 
 		// on finish scroll to next div
 		function onFinish(id){
+			// if was fullscreen exit
+			if(document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled){
+				Videos.cancelFullscreen();
+			}
 			// scroll to next div
 			var offset = $("#projects").offset().top;
 			$('html, body').stop().animate({scrollTop: offset}, 400);
@@ -55,6 +59,9 @@ Videos = {
 			if(nextVideo && nextVideo.length !== 0) {
 				$f(nextVideo[0]).api('play');
 			}
+			if(document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled){
+				Videos.cancelFullscreen();
+			}
 		}
 
 		function onPlayProgress(data, id){
@@ -63,6 +70,16 @@ Videos = {
 				$f(elem[0]).api('pause');
 			}
 		}
+	},
+
+	cancelFullscreen: function() {
+	  if(document.cancelFullScreen) {
+	    document.cancelFullScreen();
+	  } else if(document.mozCancelFullScreen) {
+	    document.mozCancelFullScreen();
+	  } else if(document.webkitCancelFullScreen) {
+	    document.webkitCancelFullScreen();
+	  }
 	}
 }
 

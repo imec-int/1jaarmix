@@ -9,8 +9,9 @@
 	margin:0;
 }
 
-#container{
+body{
 	height: 100%;
 	width: 100%;
 	background-color: #D8D4CF;
 }
+

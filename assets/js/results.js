@@ -307,15 +307,15 @@ $(pollInit); // laden als de pagina geladen is
 
 
 function pollInit() {
+  pollindex = getQuerystring('index',0);
   $("#stelling").text(polldata[pollindex].question);
-  pollindex = 0;
+  // console.log(getQuerystring('index'))
   svg = d3.select("svg");
   var totalHeight = $("#d3canvas").height(); //in Firefox is dat toch 0 hoor
   var rects = svg.selectAll("rect")
-    .data(polldata[0].answers);
-
+    .data(polldata[pollindex].answers);
   var heightScale = d3.scale.linear()
-      .domain([0, d3.max(polldata[0].answers)])
+      .domain([0, d3.max(polldata[pollindex].answers)])
       .range([totalHeight*1, 0]); //omgedraaid
 
   rects.enter().append("rect")
@@ -370,3 +370,14 @@ function prevPoll() {
 
 }
 
+function getQuerystring(key, default_)
+{
+  if (default_==null) default_=""; 
+  key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+  var qs = regex.exec(window.location.href);
+  if(qs == null)
+    return default_;
+  else
+    return qs[1];
+}

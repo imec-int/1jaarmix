@@ -7,11 +7,13 @@
 	top: 0px;
 	background-image: url('/assets/img/background.jpg');
 	height: 100%;
-	width: 100%;
+
 }
 
 #vraag{
 	background-color: rgba(0,0,0,0.2);
+	width: 50%;
+	height: 100%;
 }
 #vraag h1 {
 	font-family: 'Merriweather Sans', sans-serif;
@@ -21,4 +23,6 @@
 
 #antwoord{
 	background-color: rgba(0,0,0,0.6);
+	width: 50%;
+	height: 100%;
 }

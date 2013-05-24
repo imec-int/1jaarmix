@@ -7,10 +7,14 @@ var activeMenu = "#intro";
 */
 $("#menu a").click(function(event){
 	//event.preventDefault();
+	
 	$("#menu a").removeClass("menuItemActive");
 	$("#menu a").addClass("menuItem");
 	$(this).addClass("menuItemActive");
 
+
+	scrollToPage($(this).attr("href"));
+	return false;
 });
 
 $(document).ready(function() {
@@ -31,3 +35,12 @@ $(document).ready(function() {
 
 }*/
 
+/*
+ Transistion scroll to given page (div)
+*/
+function scrollToPage(pageId){
+	var offset = $(pageId).offset().top;
+	$('html, body').stop().animate({scrollTop: offset}, 400, function(){
+		window.location = pageId;
+	});
+}

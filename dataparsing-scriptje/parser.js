@@ -20,6 +20,9 @@ parsePeople('../assets/data/questions.csv', function (err, people){
 	var mergedAnswers = mergePeopleToQuestions(questiondata, possibleanswers, people);
 
 	mergedAnswers = calculatePercentages(mergedAnswers);
+
+	mergedAnswers = roundedPercentagesOnly(mergedAnswers);
+
 	mergedAnswers = replaceAnswerObjectWithArray(mergedAnswers);
 
 	console.log(mergedAnswers);
@@ -135,22 +138,56 @@ function calculatePercentages(mergedAnswers){
 function replaceAnswerObjectWithArray(mergedAnswers){
 	//console.log(mergedAnswers);
 
-
 	for(var i in mergedAnswers){
 		var question = mergedAnswers[i];
 
-		var answerArray = [];
-		var percentageAnswerArray = [];
-
-		for(var answerkey in question.answers){
-			answerArray.push( question.answers[answerkey] );
+		if(question.answers){
+			var answerArray = [];
+			for(var answerkey in question.answers){
+				answerArray.push( question.answers[answerkey] );
+			}
+			question.answers = answerArray;
 		}
-		question.answers = answerArray;
 
+
+		if(question.answerspercentage){
+			var percentageAnswerArray = [];
+			for(var answerkey in question.answerspercentage){
+				percentageAnswerArray.push( question.answerspercentage[answerkey] );
+			}
+			question.answerspercentage = percentageAnswerArray;
+		}
+	}
+
+	return mergedAnswers;
+}
+
+function roundedPercentagesOnly(mergedAnswers){
+	// question.answers vervangen door question.answerspercentage afgerond en totalanswers fixen op 100, ook maken dat som klopt
+	for(var i in mergedAnswers){
+		var question = mergedAnswers[i];
+
+		question.answers = {};
+		var total = 0;
 		for(var answerkey in question.answerspercentage){
-			percentageAnswerArray.push( question.answerspercentage[answerkey] );
+			question.answers[answerkey] = Math.round( question.answerspercentage[answerkey] );
+			total += question.answers[answerkey];
 		}
-		question.answerspercentage = percentageAnswerArray;
+
+		// pas resultaten aan zodat ze zeker aan 100 komen
+		while(total > 100){
+			// ow shit
+			for(var answerkey in question.answers){
+				question.answers[answerkey]--;
+				total--;
+
+				if(total == 100)
+					break;
+			}
+		}
+
+		question.totalanswers = total;
+		delete question.answerspercentage;
 	}
 
 	return mergedAnswers;

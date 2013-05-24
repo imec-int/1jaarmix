@@ -8,18 +8,51 @@ var activeMenu = "#intro";
 $("#menu a").click(function(event){
 	//event.preventDefault();
 	
-	$("#menu a").removeClass("menuItemActive");
+	/*$("#menu a").removeClass("menuItemActive");
 	$("#menu a").addClass("menuItem");
-	$(this).addClass("menuItemActive");
-
+	$(this).addClass("menuItemActive");*/
+	highlightMenuItem("#"+$(this).attr("id"));
 
 	scrollToPage($(this).attr("href"));
 	return false;
 });
 
+var scroller=self.setInterval(function(){checkScroll()},800);
+
+function checkScroll(){
+	var scrollFromTop = $(this).scrollTop();
+	// find the div which top is closest to top of browser
+	var closest;
+	var closestDistance = Infinity;
+	$(".pageDiv").each(function(){
+		console.log($(this).attr("id") + " - " + Math.abs(scrollFromTop - $(this).offset().top) + " - " + closestDistance);
+
+		if(Math.abs(scrollFromTop - $(this).offset().top) < closestDistance){
+			var thisdiv = $(this).attr("id");
+			closest = "#a_"+thisdiv;
+			closestDistance = Math.abs(scrollFromTop - $(this).offset().top);
+		}
+	});
+	if(closest){
+		//closest = $()
+		console.log(closest+" is smallest");
+		highlightMenuItem(closest);
+	}
+}
+
+
 $(document).ready(function() {
 	//
 });
+
+
+function highlightMenuItem(active){
+	/*console.log("highlight: ");
+	console.log(active);*/
+	$("#menu a").removeClass("menuItemActive");
+	$("#menu a").addClass("menuItem");
+	$(active).addClass("menuItemActive");
+}
 
 
 // check scrolling
@@ -50,4 +83,5 @@ function scrollToPage(pageId){
 	$('html, body').stop().animate({scrollTop: offset}, 400, function(){
 		window.location = pageId;
 	});
+	activeMenu = pageId;
 }

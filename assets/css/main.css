@@ -73,21 +73,21 @@ html{
 }
 
 #intro{
-	background-color: green;
+	background-color: #D8C2AC;
 }
 
 #projects{
-	background-color: blue;
+	background-color: #B9C2D8;
 }
 
 #results{
-	background-color: red;
+	background-color: #AFD8D5;
 }
 
 #slides{
-	background-color: yellow;
+	background-color: #A3D8B2;
 }
 
 #callToAction{
-	background-color: silver;
+	background-color: #BED891;
 }

@@ -293,6 +293,16 @@ function pollInit() {
 	$("#stelling").text(polldata[pollindex].question);
 	pollindex = 0;
 	svg = d3.select("svg");
+	var rects = svg.selectAll("rect")
+		.data(polldata);
+	rects.enter().append("rect")
+		.attr("x", function(d,i) {i*100})
+	    .attr("height", function(d,i) {return d[i].answerspercentage["Helemaal Eens"]})
+	    .attr("width", 50)
+	    .attr("class","rect");
+	rects.exit().remove();	
+
+
 }
 
 function nextPoll() {
@@ -300,9 +310,10 @@ function nextPoll() {
 	$("#stelling").text(polldata[pollindex].question);
 	var rects = svg.selectAll('rect');
 	rects.style("fill","steelblue");
+	rects.attr('x', pollindex*10+'px');
 	rects.attr('width','100px');
 	rects.attr('height','200px');
-	console.log(pollindex);
+	console.log(polldata[pollindex].answerspercentage[0]);
 	
 }
 

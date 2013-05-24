@@ -12,3 +12,9 @@
 	height: 100%;
 	width: 50%;
 }
+
+#vraag h1 {
+	font-family: 'Merriweather Sans', sans-serif;
+    font-size: 48px;
+    color: white;
+}

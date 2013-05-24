@@ -82,7 +82,8 @@ function mergePeopleToQuestions(questiondata, possibleanswers, people){
 			question: questiondata[q].question,
 			category: questiondata[q].category,
 			answers: {},
-			totalanswers: 0
+			totalanswers: 0,
+			twitpic: questiondata[q].twitpic,
 		};
 		for(var p in possibleanswers){
 			var answerkey = possibleanswers[p];

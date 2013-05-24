@@ -195,6 +195,7 @@ html{
 }
 
 .projectMovie iframe{
+	margin-top: 10px;
 	width: 100%;
 	height: 80%;
 }
@@ -300,3 +301,30 @@ html{
 	padding-top: 4px;
 	display: inline-block;
 }
+
+/*
+	Slides
+*/
+
+.slide{
+	float: left;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#slideContainer{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slide h3{
+	color: white;
+}
+
+.slide iframe{
+	margin-top: 10px;
+	width: 80%;
+}
+

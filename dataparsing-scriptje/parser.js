@@ -20,6 +20,7 @@ parsePeople('../assets/data/questions.csv', function (err, people){
 	var mergedAnswers = mergePeopleToQuestions(questiondata, possibleanswers, people);
 
 	mergedAnswers = calculatePercentages(mergedAnswers);
+	mergedAnswers = replaceAnswerObjectWithArray(mergedAnswers);
 
 	console.log(mergedAnswers);
 
@@ -126,6 +127,30 @@ function calculatePercentages(mergedAnswers){
 		for(var answerkey in question.answers){
 			question.answerspercentage[answerkey] = question.answers[answerkey]*100 / question.totalanswers;
 		}
+	}
+
+	return mergedAnswers;
+}
+
+function replaceAnswerObjectWithArray(mergedAnswers){
+	//console.log(mergedAnswers);
+
+
+	for(var i in mergedAnswers){
+		var question = mergedAnswers[i];
+
+		var answerArray = [];
+		var percentageAnswerArray = [];
+
+		for(var answerkey in question.answers){
+			answerArray.push( question.answers[answerkey] );
+		}
+		question.answers = answerArray;
+
+		for(var answerkey in question.answerspercentage){
+			percentageAnswerArray.push( question.answerspercentage[answerkey] );
+		}
+		question.answerspercentage = percentageAnswerArray;
 	}
 
 	return mergedAnswers;

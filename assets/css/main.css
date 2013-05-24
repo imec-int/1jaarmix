@@ -13,6 +13,9 @@ body{
 	height: 100%;
 	width: 100%;
 	background-color: #D8D4CF;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+             "Helvetica Neue", sans-serif;
+	font-weight: 300;
 }
 
 html{
@@ -38,6 +41,7 @@ html{
 	position: fixed;
 	top: 0;
 	right: 10px;
+	opacity: 0.9;
 }
 
 #menu li{
@@ -65,17 +69,16 @@ html{
 }
 
 /* Advanced menu for bigger screens */
-@media all and (min-height: 480px){
+/*@media all and (min-height: 480px){
 
-}
+}*/
 
-/* No menu for small mobile devices */
-@media all and (max-height: 480px){
+/* No menu for small mobile devices and print */
+@media all and (max-height: 480px),(max-width: 640px){
 	#menu{
 		display: none;
 	}
 }
-
 @media print{
 	#menu{
 		display: none;
@@ -109,4 +112,12 @@ html{
 
 #callToAction{
 	background-color: #BED891;
+}
+
+/*
+	Intro
+*/
+#intromovie{
+	width: 100%;
+	height: 100%;
 }

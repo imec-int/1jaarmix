@@ -52,13 +52,16 @@
         <a href="#" title="Ga naar volgende pagina">&#187;</a>
       </div>
       <div class="pageDiv" id="intro">
-        <div class="verticalFloater"></div>
+        <div class="h2Container">
+          <h2>Start Mixing</h2>
+        </div>
         <iframe id="intromovie" src="http://player.vimeo.com/video/65565625?api=1&autoplay=0&player_id=intromovie" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
       </div>
       <div class="pageDiv" id="projects">
-        <div class="verticalFloater"></div>
-        <h2>Project filmpjes</h2>
+        <div class="h2Container">
+          <h2>Projecten</h2>
+        </div>
         <div class="projectMovieContainer">
           <div class="projectMovie" id="movie1">
             <h3>Stream Store</h3>
@@ -103,21 +106,27 @@
       </div>
 
       <div class="pageDiv" id="results">
-              <div id="vraag">
-                <img id="mixLogo" src="assets/img/logo.png" />
-                <h1 id="stelling">Is het een vliegtuig? of is het een vogel? of is het dat niet?</h1>
-                <button onClick="nextPoll();">next</button>
-                <button onClick="prevPoll();">prev</button>
-              </div>
-              <div id="resultaat">
-                  <svg id="d3canvas">
+
+        <div id="vraag">
+          <div class="h2Container">
+            <h2>Resultaten</h2>
+          </div>
+          <img id="mixLogo" src="assets/img/logo.png" />
+          <h1 id="stelling">Is het een vliegtuig? of is het een vogel? of is het dat niet?</h1>
+          <button onClick="nextPoll();">next</button>
+          <button onClick="prevPoll();">prev</button>
+          <a class="resultButton" href="#" onClick="prevPoll();"><span class="bigArrow">&#171;</span> Vorige Vraag</a>
+          <a class="resultButton" href="#" onClick="nextPoll();">Volgende Vraag <span class="bigArrow">&#187;</span></a>
+        </div>
+        <div id="resultaat">
+            <svg id="d3canvas">
 <!--                     <rect id="HO"></rect>
-                    <rect id="O"></rect>
-                    <rect id="N"></rect>
-                    <rect id="E"></rect>
-                    <rect id="HE"></rect> -->
-                  </svg>
-              </div>
+              <rect id="O"></rect>
+              <rect id="N"></rect>
+              <rect id="E"></rect>
+              <rect id="HE"></rect> -->
+            </svg>
+        </div>
 
         <div id="social">
             <div class="fb">

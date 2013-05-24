@@ -25,9 +25,9 @@ $(document).ready(function() {
 /*
  PageChange
 */
-function menuClick(e){
+/*function menuClick(e){
 	var target = e.currentTarget.getAttribute("href");
 	activeMenu = e.currentTarget.getAttribute("href");
 
-}
+}*/
 

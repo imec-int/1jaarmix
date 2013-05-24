@@ -1,4 +1,4 @@
 // Kasper
-var R = $("#results");
+/*var R = $("#results");
 var position = R.position();
-$("#vraag").css("top" ,position.top);
+$("#vraag").css("top" ,position.top);*/

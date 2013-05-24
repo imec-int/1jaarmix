@@ -14,8 +14,8 @@ $("#menu a").click(function(event){
 });
 
 $(document).ready(function() {
-	$(".pageDiv").droidscroll();
-}
+	//
+});
 
 /*
  Makes DIVS full height

@@ -102,18 +102,23 @@
             <h2>Resultaten</h2>
           </div>
           <img id="mixLogo" src="assets/img/logo.png" />
-          <h1 id="stelling">Is het een vliegtuig? of is het een vogel? of is het dat niet?</h1>
-          <button onClick="nextPoll();">next</button>
-          <button onClick="prevPoll();">prev</button>
+          <h1 id="stelling"></h1>
           <div class="vraagButtons">
-            <a class="resultButton" href="#" onClick="prevPoll();"><span class="bigArrow">&#171;&#160;</span> Vorige vraag</a>
-            <a class="resultButton" href="#" onClick="nextPoll();">Volgende vraag <span class="bigArrow">&#160;&#187;</span></a>
+            <a class="resultButton" onClick="Results.prev();"><span class="bigArrow">&#171;&#160;</span> Vorige vraag</a>
+            <a class="resultButton" onClick="Results.next();">Volgende vraag <span class="bigArrow">&#160;&#187;</span></a>
           </div>
         </div>
         <div id="resultaat">
-            <div id="canvasContainer">
-              <svg id="d3canvas">
-              </svg>
+            <div id="resultswrapper">
+              <div id="bars">
+              </div>
+              <div id="labels">
+                <div class="label">Helemaal Oneens</div>
+                <div class="label">Oneens</div>
+                <div class="label">Neutraal</div>
+                <div class="label">Eens</div>
+                <div class="label">Helemaal Eens</div>
+              </div>
             </div>
             <div id="social">
               <div class="fb">

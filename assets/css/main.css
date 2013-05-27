@@ -19,10 +19,12 @@ body{
 	/*font-family: 'Merriweather Sans', sans-serif;*/
 	background-image: url('/assets/img/background.jpg');
 	background-repeat: repeat-y;
+	position: relative;
 }
 
 html{
 	height: 100%;
+	position: relative;
 }
 
 #container{
@@ -329,10 +331,29 @@ html{
 	text-align: right;
 }
 
-#canvasContainer{
+#resultswrapper{
 	height: 80%;
 	width: 80%;
 	padding: 5%;
+	position:relative
+}
+
+#resultswrapper #bars{
+	margin-left: 50px;
+	height:100%;
+	position:relative;
+}
+
+#resultswrapper #labels{
+	margin-left: 40px;
+	font-size: 14px;
+}
+
+#resultswrapper #labels .label{
+	float: left;
+	width: 70px;
+	margin-right: 30px;
+	text-align: center;
 }
 
 /*

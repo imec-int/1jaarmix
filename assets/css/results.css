@@ -2,38 +2,9 @@
 	Css voor d3 graphs
 	Kasper
 */
-/*#results {
-	position: absolute;
-	top: 0px;
-	background-image: url('/assets/img/background.jpg');
-	height: 100%;
-
-}
-
-#vraag{
-	background-color: rgba(0,0,0,0.2);
-	width: 50%;
-	height: 100%;
-}
-#vraag h1 {
-	font-family: 'Merriweather Sans', sans-serif;
-    font-size: 48px;
-    color: white;
-}
-
-#antwoord{
-	background-color: rgba(0,0,0,0.6);
-	width: 50%;
-	height: 100%;
-}*/
-
 svg .shadow {
         -moz-box-shadow: -5px -5px 5px #888;
         -webkit-box-shadow: -5px -5px 5px #888;
         box-shadow: -5px -5px 5px #888;
         text-shadow: 1px 1px 4px #E6C5D5;
     }
-
-svg {
-	height: 80%;
-}

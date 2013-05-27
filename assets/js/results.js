@@ -323,7 +323,7 @@ Results = {
 		else
 			value--;
 
-		percentageEl.html(value + " %");
+		percentageEl.text(value + " %");
 
 		if(value == goal)
 			return;
@@ -336,7 +336,7 @@ Results = {
 	},
 
 	updateQuestiontext: function(item){
-		$("#question").text( item.question );
+		$("#stelling").text( item.question );
 	},
 
 	next: function (event){

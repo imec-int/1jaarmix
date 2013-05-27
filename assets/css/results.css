@@ -1,4 +1,4 @@
-/*   
+/*
 	Css voor d3 graphs
 	Kasper
 */
@@ -27,11 +27,12 @@
 	height: 100%;
 }*/
 
-svg .shadow { 
+svg .shadow {
         -moz-box-shadow: -5px -5px 5px #888;
         -webkit-box-shadow: -5px -5px 5px #888;
-        box-shadow: -5px -5px 5px #888; 
-    }   
+        box-shadow: -5px -5px 5px #888;
+        text-shadow: 1px 1px 4px #E6C5D5;
+    }
 
 svg {
 	height: 80%;

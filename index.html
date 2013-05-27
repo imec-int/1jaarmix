@@ -27,10 +27,8 @@
       }
      .fb, .twit, .share, .gplus{
         float:left;
-        width:200px;
         height:100px;
         overflow:hidden;
-        border-left:solid 1px red;
       }
     </style>
   </head>
@@ -115,8 +113,10 @@
           <h1 id="stelling">Is het een vliegtuig? of is het een vogel? of is het dat niet?</h1>
           <button onClick="nextPoll();">next</button>
           <button onClick="prevPoll();">prev</button>
-          <a class="resultButton" href="#" onClick="prevPoll();"><span class="bigArrow">&#171;</span> Vorige Vraag</a>
-          <a class="resultButton" href="#" onClick="nextPoll();">Volgende Vraag <span class="bigArrow">&#187;</span></a>
+          <div class="vraagButtons">
+            <a class="resultButton" href="#" onClick="prevPoll();"><span class="bigArrow">&#171;&#160;</span> Vorige vraag</a>
+            <a class="resultButton" href="#" onClick="nextPoll();">Volgende vraag <span class="bigArrow">&#160;&#187;</span></a>
+          </div>
         </div>
         <div id="resultaat">
             <svg id="d3canvas">

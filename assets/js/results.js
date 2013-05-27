@@ -5,13 +5,7 @@ Results = {
 		{
 			"question": "Over 10 jaar kijkt men alleen nog maar on-demand of uitgesteld naar televisie.",
 			"category": "Content",
-			"answers": [
-				13,
-				31,
-				5,
-				30,
-				21
-			],
+			"answers": [14, 29, 8, 28, 21],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstk8n"
 		},
@@ -19,91 +13,49 @@ Results = {
 			"question": "Als de media niet innoveert in Vlaanderen kijken we straks enkel naar buitenlandse content.",
 			"questiontwitter": "Als de media niet innoveert in Vlaanderen kijken we straks enkel buitenlandse content.",
 			"category": "Content",
-			"answers": [
-				3,
-				36,
-				2,
-				40,
-				19
-			],
+			"answers": [7, 31, 2, 40, 20],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstkd3"
 		},
 		{
 			"question": "Het mediabedrijf van de toekomst covert elk medium.",
 			"category": "Content",
-			"answers": [
-				17,
-				31,
-				6,
-				18,
-				28
-			],
+			"answers": [17,	30,	6, 18, 29],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstl1p"
 		},
 		{
 			"question": "Content aggregeren is een overbodige schakel in de waardeketen van media geworden.",
 			"category": "Content",
-			"answers": [
-				31,
-				42,
-				7,
-				16,
-				4
-			],
+			"answers": [31,	45,	7, 14, 3],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstl6t"
 		},
 		{
 			"question": "Journalistiek zal volautomatisch worden: content wordt gemaakt door algoritmes.",
 			"category": "Content",
-			"answers": [
-				49,
-				39,
-				2,
-				8,
-				2
-			],
+			"answers": [49, 37,	2, 9, 3],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstl9n"
 		},
 		{
 			"question": "Het doorspoelen of vermijden van reclame moet betalend worden.",
 			"category": "Geld",
-			"answers": [
-				51,
-				13,
-				5,
-				27,
-				4
-			],
+			"answers": [56,	15,	4, 22, 3],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstlf6"
 		},
 		{
 			"question": "Binnenkort zit alle kwaliteitscontent onherroepelijk achter een betaalmuur.",
 			"category": "Geld",
-			"answers": [
-				13,
-				34,
-				7,
-				34,
-				12
-			],
+			"answers": [14, 33, 5, 38, 10],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstlmi"
 		},
 		{
 			"question": "Vergelijkbare ROI cijfers over alle media heen zijn een must voor de mediasector.",
 			"category": "Geld",
-			"answers": [
-				6,
-				13,
-				15,
-				36,
-				30
-			],
+			"answers": [6, 11, 15, 39, 29],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstlqd"
 		},
@@ -111,91 +63,49 @@ Results = {
 			"question": "Views en clicks zeggen niets over de impact van de reclame, sentimentanalyse is de nieuwe currency.",
 			"questiontwitter": "Views en clicks zeggen niets over de impact van de reclame... ",
 			"category": "Geld",
-			"answers": [
-				4,
-				21,
-				26,
-				33,
-				16
-			],
+			"answers": [4, 18, 26, 37, 15],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstmj4"
 		},
 		{
 			"question": "Targeted advertenties zijn de redding van het advertentiemodel.",
 			"category": "Geld",
-			"answers": [
-				4,
-				19,
-				12,
-				46,
-				19
-			],
+			"answers": [7, 21, 10, 44, 18],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstmnw"
 		},
 		{
 			"question": "Net zoals de iPad wordt Google Glass de norm binnen de drie jaar.",
 			"category": "Innovatie",
-			"answers": [
-				5,
-				42,
-				16,
-				16,
-				21
-			],
+			"answers": [4, 44, 15, 19, 18],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstms7"
 		},
 		{
 			"question": "De mediabedrijven moeten meer samenwerken om gecombineerde producten te maken.",
 			"category": "Innovatie",
-			"answers": [
-				1,
-				9,
-				13,
-				41,
-				36
-			],
+			"answers": [2, 7, 13, 42, 36],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstmvn"
 		},
 		{
 			"question": "Echte innovatie zit in de hardware, software zal altijd volgen.",
 			"category": "Innovatie",
-			"answers": [
-				43,
-				31,
-				11,
-				9,
-				6
-			],
+			"answers": [42, 33,	11,	9, 5],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstne7"
 		},
 		{
 			"question": "De strenge Europese privacy wetgeving is een competitief nadeel voor innovatie.",
 			"category": "Innovatie",
-			"answers": [
-				18,
-				35,
-				6,
-				20,
-				20
-			],
-			"totalanswers": 99,
+			"answers": [15,	26,	17,	28,	14],
+			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstn77"
 		},
 		{
 			"question": "De overheid moet reguleren hoe distributeurs en omroepen kunnen samenwerken.",
 			"category": "Innovatie",
-			"answers": [
-				31,
-				33,
-				9,
-				18,
-				9
-			],
+			"answers": [40, 29,	9, 13, 9],
 			"totalanswers": 100,
 			"twitpic": "http://twitpic.com/cstnhs"
 		}

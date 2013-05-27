@@ -152,6 +152,7 @@ Results = {
 	drawBars: function(data){
 		Results.updateQuestiontext( data );
 		Results.updateSocialMessages( data );
+		window.location.hash = "#results" + Results.index;
 
 		var heightScale = d3.scale.linear()
 			.domain([0, d3.max(data.answers)])
@@ -204,6 +205,7 @@ Results = {
 	updateBars: function(data){
 		Results.updateQuestiontext( data );
 		Results.updateSocialMessages( data );
+		window.location.hash = "#results" + Results.index;
 
 		var heightScale = d3.scale.linear()
 			.domain([0, d3.max(data.answers)])
@@ -282,9 +284,9 @@ Results = {
 		twitter.attr('data-url', item.twitpic);
 
 		if(item.questiontwitter)
-			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be#results"); // kortere versie
+			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be/#results" + Results.index); // kortere versie
 		else
-			twitter.attr('data-text', item.question + " www.startmixing.be#results");
+			twitter.attr('data-text', item.question +  " www.startmixing.be/#results" + Results.index);
 
 		twitter.attr('data-via', 'mixbe');
 		twitter.attr('data-lang', 'nl');
@@ -317,7 +319,7 @@ Results = {
 		if( window.location.hash.match(/#results/) )
 			scrollToPage("#results"); //robby's functie aanroepen
 
-		var match = window.location.hash.match(/#results&index=(\d+)/);
+		var match = window.location.hash.match(/#results(\d+)/);
 
 		if(!match)
 			return 0;

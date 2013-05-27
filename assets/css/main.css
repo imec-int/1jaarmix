@@ -130,6 +130,7 @@ html{
 	bottom: 0;
 	right: 10px;
 	opacity: 0.9;
+	z-index: 10000;
 
 
 

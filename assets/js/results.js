@@ -4,6 +4,7 @@ Results = {
 	data:[
 		{
 			"question": "Over 10 jaar kijkt men alleen nog maar on-demand of uitgesteld naar televisie.",
+			"questiontwitter": "Over 10 jaar kijkt men alleen nog maar on-demand of uitgesteld naar televisie",
 			"category": "Content",
 			"answers": [14, 29, 8, 28, 21],
 			"totalanswers": 100,
@@ -11,7 +12,7 @@ Results = {
 		},
 		{
 			"question": "Als de media niet innoveert in Vlaanderen kijken we straks enkel naar buitenlandse content.",
-			"questiontwitter": "Als de media niet innoveert in Vlaanderen kijken we straks enkel buitenlandse content.",
+			"questiontwitter": "Als de media hier niet innoveert kijken we straks enkel buitenlandse content.",
 			"category": "Content",
 			"answers": [7, 31, 2, 40, 20],
 			"totalanswers": 100,
@@ -26,6 +27,7 @@ Results = {
 		},
 		{
 			"question": "Content aggregeren is een overbodige schakel in de waardeketen van media geworden.",
+			"questiontwitter": "Content aggregeren is een overbodige schakel in de waardeketen van de media.",
 			"category": "Content",
 			"answers": [31,	45,	7, 14, 3],
 			"totalanswers": 100,
@@ -33,6 +35,7 @@ Results = {
 		},
 		{
 			"question": "Journalistiek zal volautomatisch worden: content wordt gemaakt door algoritmes.",
+			"questiontwitter": "Journalistiek wordt volautomatisch: content wordt gemaakt door algoritmes.",
 			"category": "Content",
 			"answers": [49, 37,	2, 9, 3],
 			"totalanswers": 100,
@@ -54,6 +57,7 @@ Results = {
 		},
 		{
 			"question": "Vergelijkbare ROI cijfers over alle media heen zijn een must voor de mediasector.",
+			"questiontwitter": "Vergelijkbare ROI cijfers over alle media heen zijn een must voor de media.",
 			"category": "Geld",
 			"answers": [6, 11, 15, 39, 29],
 			"totalanswers": 100,
@@ -83,6 +87,7 @@ Results = {
 		},
 		{
 			"question": "De mediabedrijven moeten meer samenwerken om gecombineerde producten te maken.",
+			"questiontwitter": "Mediabedrijven moeten meer samenwerken om gecombineerde producten te maken.",
 			"category": "Innovatie",
 			"answers": [2, 7, 13, 42, 36],
 			"totalanswers": 100,
@@ -97,6 +102,7 @@ Results = {
 		},
 		{
 			"question": "De strenge Europese privacy wetgeving is een competitief nadeel voor innovatie.",
+			"questiontwitter": "De strenge Europese privacy wetgeving is competitief nadeel voor innovatie.",
 			"category": "Innovatie",
 			"answers": [15,	26,	17,	28,	14],
 			"totalanswers": 100,

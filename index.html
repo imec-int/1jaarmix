@@ -21,15 +21,7 @@
      http://stackoverflow.com/questions/10337334/how-to-align-facebook-twitter-google-and-linkedin-buttons-on-the-right
      -->
     <style>
-      .social{
-        float:right;
-        border:solid 1px green;
-      }
-     .fb, .twit, .share, .gplus{
-        float:left;
-        height:100px;
-        overflow:hidden;
-      }
+
     </style>
   </head>
 
@@ -119,26 +111,24 @@
           </div>
         </div>
         <div id="resultaat">
-            <svg id="d3canvas">
-<!--                     <rect id="HO"></rect>
-              <rect id="O"></rect>
-              <rect id="N"></rect>
-              <rect id="E"></rect>
-              <rect id="HE"></rect> -->
-            </svg>
+            <div id="canvasContainer">
+              <svg id="d3canvas">
+              </svg>
+            </div>
+            <div id="social">
+              <div class="fb">
+                <div class="fb-like" data-href="http://startmixing.be/vraag1.html" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="lucida grande" send="false"></div>
+              </div>
+              <div class="twit">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitpic.com/cstia9" data-text="Over 10 jaar kijkt men allen nog maar ondemand of uitgesteld naar televisie." data-via="mixbe" data-lang="nl" data-related="mixbe" data-hashtags="1jaarmix" >Tweeten</a>
+              </div>
+              <div class="gplus">
+               <g:plusone></g:plusone>
+              </div>
+            </div>
         </div>
 
-        <div id="social">
-            <div class="fb">
-              <div class="fb-like" data-href="http://startmixing.be/vraag1.html" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="lucida grande"></div>
-            </div>
-            <div class="twit">
-              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitpic.com/cstia9" data-text="Over 10 jaar kijkt men allen nog maar ondemand of uitgesteld naar televisie." data-via="mixbe" data-lang="nl" data-related="mixbe" data-hashtags="1jaarmix">Tweeten</a>
-            </div>
-            <div class="gplus">
-             <g:plusone></g:plusone>
-            </div>
-       </div>
+
     </div>
       <div class="pageDiv" id="slides">
         <div class="h2Container">

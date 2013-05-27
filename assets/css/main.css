@@ -306,8 +306,10 @@ html{
 }
 
 #resultaat{
-	height: 80%;
-	padding: 20px;
+	height: 100%;
+	position: relative;
+	width: 50%;
+	float: left;
 }
 
 .vraagButtons{
@@ -316,6 +318,10 @@ html{
 	right: 5px;
 	float: right;
 	text-align: right;
+}
+
+#canvasContainer{
+	height: 90%;
 }
 
 /*
@@ -342,5 +348,39 @@ html{
 .slide iframe{
 	margin-top: 10px;
 	width: 80%;
+}
+
+/*  SOCIAL  */
+
+#social{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	height: 36px;
+	float: left;
+}
+.fb, .twit, .share, .gplus{
+	width: 110px;
+	margin-right: 10px;
+	float:left;
+	height:36px;
+	overflow:hidden;
+	padding-left: 44px;
+	padding-top: 7px;
+}
+
+.fb{
+	background-image: url('/assets/img/social/facebook.png');
+	background-repeat: no-repeat;
+}
+
+.twit{
+	background-image: url('/assets/img/social/twitter.png');
+	background-repeat: no-repeat;
+}
+
+.gplus{
+	background-image: url('/assets/img/social/gplus.png');
+	background-repeat: no-repeat;
 }
 

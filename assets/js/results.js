@@ -120,6 +120,26 @@ Results = {
 		Results.svg = d3.select("#bars").append("svg")
 			.attr("width", Results.width)
 			.attr("height", Results.height);
+		var defs = Results.svg.append("defs");
+		var filter = defs.append("filter")
+		    .attr("id", "drop-shadow")
+
+		filter.append("feGaussianBlur")
+		    .attr("in", "SourceAlpha")
+		    .attr("stdDeviation", 2)
+		    .attr("result", "blur");
+		filter.append("feOffset")
+		    .attr("in", "blur")
+		    .attr("dx", 4)
+		    .attr("dy", 4)
+		    .attr("result", "offsetBlur");
+
+		var feMerge = filter.append("feMerge");
+
+		feMerge.append("feMergeNode")
+		    .attr("in", "offsetBlur")
+		feMerge.append("feMergeNode")
+		    .attr("in", "SourceGraphic");
 
 		Results.topOffset = 30;
 		Results.maxBarheight = Results.height - Results.topOffset;
@@ -158,7 +178,8 @@ Results = {
 				})
 				.attr("width", Results.barWidth)
 				.attr("fill", "#E40473")
-				.attr("class","shadow");
+				.attr("class","shadow")
+				.style("filter", "url(#drop-shadow)");
 
 		percentages.enter()
 			.append("text")
@@ -175,7 +196,8 @@ Results = {
 				})
 				.text(function (d, i){
 					return d + " %";
-				});
+				})
+				.style("filter", "url(#drop-shadow)");
 		Results.previousAnswers = data.answers;
 	},
 

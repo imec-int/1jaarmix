@@ -17,6 +17,7 @@ Results = {
 		},
 		{
 			"question": "Als de media niet innoveert in Vlaanderen kijken we straks enkel naar buitenlandse content.",
+			"questiontwitter": "Als de media niet innoveert in Vlaanderen kijken we straks enkel buitenlandse content.",
 			"category": "Content",
 			"answers": [
 				3,
@@ -108,6 +109,7 @@ Results = {
 		},
 		{
 			"question": "Views en clicks zeggen niets over de impact van de reclame, sentimentanalyse is de nieuwe currency.",
+			"questiontwitter": "Views en clicks zeggen niets over de impact van de reclame... ",
 			"category": "Geld",
 			"answers": [
 				4,
@@ -210,7 +212,7 @@ Results = {
 			.attr("height", Results.height);
 
 		Results.topOffset = 30;
-		Results.maxBarheight = Results.height - 10; //marge van 10 tss bars en labels
+		Results.maxBarheight = Results.height - Results.topOffset;
 
 
 		Results.index = 0;
@@ -219,6 +221,7 @@ Results = {
 
 	drawBars: function(data){
 		Results.updateQuestiontext( data );
+		Results.updateSocialMessages( data );
 
 		var heightScale = d3.scale.linear()
 			.domain([0, d3.max(data.answers)])
@@ -238,10 +241,10 @@ Results = {
 					return i*Results.barDistance;
 				})
 				.attr("y", function (d,i){
-					return Results.maxBarheight - heightScale(d) + Results.topOffset;
+					return Results.maxBarheight + Results.topOffset - heightScale(d);
 				})
 				.attr("height", function (d,i){
-					return heightScale(d) - Results.topOffset;
+					return heightScale(d);
 				})
 				.attr("width", Results.barWidth)
 				.attr("fill", "#E40473")
@@ -268,6 +271,7 @@ Results = {
 
 	updateBars: function(data){
 		Results.updateQuestiontext( data );
+		Results.updateSocialMessages( data );
 
 		var heightScale = d3.scale.linear()
 			.domain([0, d3.max(data.answers)])
@@ -282,10 +286,10 @@ Results = {
 		bars.transition()
 			.duration(750)
 			.attr("y", function (d,i){
-				return Results.maxBarheight - heightScale(d) + Results.topOffset;
+				return Results.maxBarheight + Results.topOffset - heightScale(d);
 			})
 			.attr("height", function (d,i){
-				return heightScale(d) - Results.topOffset;
+				return heightScale(d);
 			});
 
 		percentages.transition()
@@ -337,6 +341,28 @@ Results = {
 
 	updateQuestiontext: function(item){
 		$("#stelling").text( item.question );
+	},
+
+	updateSocialMessages: function(item){
+		var twitter = $(document.createElement('a'));
+		twitter.attr('href', 'http://twitter.com/share');
+		twitter.attr('class', 'twitter-share-button');
+		twitter.attr('data-url', item.twitpic);
+
+		if(item.questiontwitter)
+			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be"); // kortere versie
+		else
+			twitter.attr('data-text', item.question + " www.startmixing.be");
+
+		twitter.attr('data-via', 'mixbe');
+		twitter.attr('data-lang', 'nl');
+		twitter.attr('data-related', 'mixbe');
+		twitter.innerHTML = "tweet dit";
+		$(".twit").empty();
+		$(".twit").append(twitter);
+
+		if(typeof(twttr) !== 'undefined' && typeof(twttr.widgets) !== 'undefined')
+			twttr.widgets.load();
 	},
 
 	next: function (event){

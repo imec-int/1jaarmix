@@ -98,10 +98,18 @@ html{
 	#menu{
 		display: none;
 	}
+	#next{
+		display: none;
+		visibility: hidden;
+	}
 }
 @media print{
 	#menu{
 		display: none;
+	}
+	#next{
+		display: none;
+		visibility: hidden;
 	}
 }
 
@@ -240,7 +248,8 @@ html{
 */
 
 #d3canvas{
-	width: 50%;
+	width: 100%;
+	height: 100%;
 }
 
 #results {
@@ -321,7 +330,9 @@ html{
 }
 
 #canvasContainer{
-	height: 90%;
+	height: 80%;
+	width: 80%;
+	padding: 5%;
 }
 
 /*

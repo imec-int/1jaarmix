@@ -368,23 +368,23 @@ function nextPoll() {
 }
 
 function prevPoll() {
-  if (pollindex == 0) {pollindex = 15;}
-  pollindex--;
-  $("#stelling").text(polldata[pollindex].question);
-  updatePoll();
-  location.hash = "results?index="+pollindex+"";
+	if (pollindex == 0) {pollindex = 15;}
+	pollindex--;
+	$("#stelling").text(polldata[pollindex].question);
+	updatePoll();
+	location.hash = "results?index="+pollindex+"";
 
 }
 
 function getQuerystring(key, default_)
 {
-  if (default_==null) default_=""; 
-  key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-  var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
-  var qs = regex.exec(window.location.href);
-  if(qs == null)
-    return default_;
-  else
-  	scrollToPage("#results");
-    return qs[1];
+	if (default_==null) default_="";
+	key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+	var qs = regex.exec(window.location.href);
+	if(qs == null)
+		return default_;
+	else
+		scrollToPage("#results");
+		return qs[1];
 }

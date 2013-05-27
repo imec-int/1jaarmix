@@ -124,8 +124,8 @@ Results = {
 		Results.topOffset = 30;
 		Results.maxBarheight = Results.height - Results.topOffset;
 
-
-		Results.index = 0;
+		Results.index = Results.getIndexFromUrl();
+		console.log( Results.index );
 		Results.drawBars( Results.data[Results.index] );
 	},
 
@@ -260,9 +260,9 @@ Results = {
 		twitter.attr('data-url', item.twitpic);
 
 		if(item.questiontwitter)
-			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be"); // kortere versie
+			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be#results"); // kortere versie
 		else
-			twitter.attr('data-text', item.question + " www.startmixing.be");
+			twitter.attr('data-text', item.question + " www.startmixing.be#results");
 
 		twitter.attr('data-via', 'mixbe');
 		twitter.attr('data-lang', 'nl');
@@ -289,6 +289,31 @@ Results = {
 			Results.index = Results.data.length - 1;
 
 		Results.updateBars( Results.data[Results.index] );
+	},
+
+	getIndexFromUrl: function(){
+		if( window.location.hash.match(/#results/) )
+			scrollToPage("#results"); //robby's functie aanroepen
+
+		var match = window.location.hash.match(/#results&index=(\d+)/);
+
+		if(!match)
+			return 0;
+		if(!match[1])
+			return 0;
+
+		var index = parseInt(match[1]);
+
+		if(isNaN(index))
+			return 0;
+
+		if(index < 0)
+			return 0;
+
+		if(index >= Results.data.length)
+			return 0;
+
+		return index;
 	}
 };
 

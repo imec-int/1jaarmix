@@ -305,16 +305,17 @@ html{
 	color:white;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 16px;
 	padding: 8px;
 	background-color: #333;
 	opacity: 0.9;
+	cursor: pointer;
 }
 
 .bigArrow{
 	font-weight: bold;
-	font-size: 26px;
-	padding-top: 4px;
+/*	font-size: 26px;
+	padding-top: 4px;*/
 	display: inline-block;
 }
 
@@ -327,8 +328,8 @@ html{
 
 .vraagButtons{
 	position: absolute;
-	bottom: 5px;
-	right: 5px;
+	bottom: 49px;
+	right: 81px;
 	float: right;
 	text-align: right;
 }
@@ -388,8 +389,8 @@ html{
 
 #social{
 	position: absolute;
-	bottom: 5px;
-	left: 5px;
+	bottom: 48px;
+	left: 76px;
 	height: 36px;
 	float: left;
 }
@@ -398,7 +399,7 @@ html{
 	margin-right: 10px;
 	float:left;
 	height:36px;
-	overflow:hidden;
+	/*overflow:hidden;*/
 	padding-left: 44px;
 	padding-top: 7px;
 }

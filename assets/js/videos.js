@@ -59,8 +59,17 @@ Videos = {
 			if(nextVideo && nextVideo.length !== 0) {
 				$f(nextVideo[0]).api('play');
 			}
+			// if fullscreen exit
 			if(document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled){
 				Videos.cancelFullscreen();
+			}
+			// after latest video scroll to results
+			if(id === 'mediaid'){
+				// timeout necessary for chrome; otherwise it scrolls too far when coming from fullscreen
+				setTimeout(function(){
+					var offset = $("#results").offset().top;
+					$('html, body').stop().animate({scrollTop: offset}, 400);}
+				, 1000);
 			}
 		}
 

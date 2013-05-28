@@ -1,7 +1,7 @@
 // Robby
 
 var activeMenu = "intro";
-var menus = ["intro","projects","results","slides","callToAction"]
+var menus = ["intro","projects","results","slides","keynotes","callToAction"]
 var isScrollingToNext = false;
 
 /*

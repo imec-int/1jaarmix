@@ -32,10 +32,10 @@ html{
 }
 
 .h2Container h2{
-	color: #e30077;
+	color: #000;
 	font-size: 42px;
 	text-align: right;
-	text-shadow: 0.5px 0.5px 4px #E6C5D5;
+	/*text-shadow: 0.5px 0.5px 4px #E6C5D5;*/
 }
 
 .h2Container{
@@ -167,6 +167,10 @@ html{
 
 #slides{
 	background-color: rgba(0,0,0,0.15);
+}
+
+#keynotes{
+	background-color: rgba(0,0,0,0.3);
 }
 
 #callToAction{
@@ -328,14 +332,14 @@ html{
 
 .vraagButtons{
 	position: absolute;
-	bottom: 49px;
-	right: 81px;
+	bottom: 26px;
+	right: 36px;
 	float: right;
 	text-align: right;
 }
 
 #resultswrapper{
-	height: 80%;
+	height: 75%;
 	width: 80%;
 	padding: 5%;
 	position:relative
@@ -357,6 +361,18 @@ html{
 	width: 70px;
 	margin-right: 30px;
 	text-align: center;
+}
+
+#vraagNr{
+	width: 50px;
+	display: inline-block;
+	padding: 8px;
+	font-weight: bold;
+}
+
+.totalPages{
+	color: #e30077;
+	font-weight: bold;
 }
 
 /*
@@ -385,12 +401,21 @@ html{
 	width: 80%;
 }
 
+/*  Keynotes */
+#keynotesmovie{
+	width: 80%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 /*  SOCIAL  */
 
 #social{
 	position: absolute;
-	bottom: 48px;
-	left: 76px;
+	bottom: 26px;
+	left: 36px;
 	height: 36px;
 	float: left;
 }

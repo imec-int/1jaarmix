@@ -157,6 +157,7 @@ Results = {
 
 	drawBars: function(data){
 		Results.updateQuestiontext( data );
+		Results.updateQuestionNumber(Results.index+1);
 		Results.updateSocialMessages( data );
 		window.location.hash = "#results" + Results.index;
 
@@ -208,6 +209,7 @@ Results = {
 
 	updateBars: function(data){
 		Results.updateQuestiontext( data );
+		Results.updateQuestionNumber(Results.index+1);
 		Results.updateSocialMessages( data );
 		window.location.hash = "#results" + Results.index;
 
@@ -281,6 +283,10 @@ Results = {
 		$("#stelling").text( item.question );
 	},
 
+	updateQuestionNumber: function(index){
+		$("#vraagIndex").text( index );
+	},
+
 	updateSocialMessages: function(item){
 		var twitter = $(document.createElement('a'));
 		twitter.attr('href', 'http://twitter.com/share');
@@ -309,6 +315,7 @@ Results = {
 			Results.index = 0;
 
 		Results.updateBars( Results.data[Results.index] );
+		Results.updateQuestionNumber(Results.index+1);
 	},
 
 	prev: function (event){
@@ -317,6 +324,7 @@ Results = {
 			Results.index = Results.data.length - 1;
 
 		Results.updateBars( Results.data[Results.index] );
+		Results.updateQuestionNumber(Results.index+1);
 	},
 
 	getIndexFromUrl: function(){

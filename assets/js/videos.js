@@ -3,6 +3,7 @@ Videos = {
 	pageloaded: function(){
 		Videos.initIntroVideo();
 		Videos.initProjectVideos();
+		Videos.initKeynoteVideo();
 	},
 
 	isScrolledIntoView: function(elem){
@@ -89,6 +90,34 @@ Videos = {
 	  } else if(document.webkitCancelFullScreen) {
 	    document.webkitCancelFullScreen();
 	  }
+	},
+
+	initKeynoteVideo: function() {
+		var iframe = $('#keynotesmovie')[0];
+		// $f van froogaloop
+		var player = $f(iframe.id);
+		// when player is ready add listeners for finish
+		player.addEvent('ready', function(){
+			player.addEvent('finish', onFinish);
+			player.addEvent('playProgress', onPlayProgress);
+		});
+		// on finish scroll to next div
+		function onFinish(id){
+			// if was fullscreen exit
+			if(document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled){
+				Videos.cancelFullscreen();
+			}
+			// scroll to next div
+			var offset = $("#callToAction").offset().top;
+			$('html, body').stop().animate({scrollTop: offset}, 400);
+		}
+
+		// when playing check if video is scrolled out of view. If so, pause
+		function onPlayProgress(data, id){
+			if(!Videos.isScrolledIntoView($("#keynotes")[0])){
+				player.api('pause');
+			}
+		}
 	}
 }
 

@@ -291,7 +291,7 @@ Results = {
 		var twitter = $(document.createElement('a'));
 		twitter.attr('href', 'http://twitter.com/share');
 		twitter.attr('class', 'twitter-share-button');
-		twitter.attr('data-url', "http://www.startmixing.be/"+ Results.index+".html/#results" + Results.index);
+		twitter.attr('data-url', "http://www.startmixing.be/"+ Results.index+".html#results" + Results.index);
 
 		/*if(item.questiontwitter)
 			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be/#results" + Results.index); // kortere versie
@@ -310,7 +310,7 @@ Results = {
 			twttr.widgets.load();
 
 		//G+ button updaten
-		gapi.plusone.render("gplusContainer", {"href":"http://www.startmixing.be/"+ Results.index+".html/#results" + Results.index});
+		gapi.plusone.render("gplusContainer", {"href":"http://www.startmixing.be/"+ Results.index+".html#results" + Results.index});
 	},
 
 	next: function (event){

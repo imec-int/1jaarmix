@@ -297,10 +297,10 @@ Results = {
 			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be/#results" + Results.index); // kortere versie
 		else
 			twitter.attr('data-text', item.question +  " www.startmixing.be/#results" + Results.index);
-
+		*/
 		twitter.attr('data-via', 'mixbe');
 		twitter.attr('data-lang', 'nl');
-		twitter.attr('data-related', 'mixbe');*/
+		twitter.attr('data-related', 'mixbe');
 		twitter.attr('data-hashtags', '1jaarmix');
 		twitter.innerHTML = "tweet dit";
 		$(".twit").empty();

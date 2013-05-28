@@ -139,7 +139,7 @@
                 <!-- vullen we dynamisch in -->
               </div>
               <div class="gplus">
-               <g:plusone></g:plusone>
+               <div id="gplusContainer"></div>
               </div>
             </div>
         </div>
@@ -202,24 +202,14 @@
     <script src="//a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      {"parsetags": "explicit"}
+    </script>
     <!-- js files-->
     <script src="assets/js/results.js"></script>
     <script src="assets/js/layout.js"></script>
 	  <script src="assets/js/videos.js"></script>
 
-    <!-- Google plus button load asynchrounasly -->
-    <script type="text/javascript">
-      window.___gcfg = {
-        lang: 'nl'
-      };
-
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
     <!-- Javascript for Facebook like buttons -->
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

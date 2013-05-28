@@ -105,6 +105,8 @@ function scrollToPage(pageId){
 	var offset = $(pageId).offset().top;
 	$('html, body').stop().animate({scrollTop: offset}, 400, function(){
 		window.location = pageId;
+		if( window.location.hash.match(/#results/) && Results!= null)
+			window.location = pageId+Results.index;
 		isScrollingToNext = false;
 	});
 	activeMenu = pageId;

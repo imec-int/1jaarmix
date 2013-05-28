@@ -157,6 +157,7 @@ Results = {
 
 	drawBars: function(data){
 		Results.updateQuestiontext( data );
+		Results.updateQuestionNumber(Results.index+1);
 		Results.updateSocialMessages( data );
 		window.location.hash = "#results" + Results.index;
 
@@ -208,6 +209,7 @@ Results = {
 
 	updateBars: function(data){
 		Results.updateQuestiontext( data );
+		Results.updateQuestionNumber(Results.index+1);
 		Results.updateSocialMessages( data );
 		window.location.hash = "#results" + Results.index;
 
@@ -280,6 +282,10 @@ Results = {
 	updateQuestiontext: function(item){
 		$("#stelling").text( item.question );
 	},
+
+	updateQuestionNumber: function(index){
+ 		$("#vraagIndex").text( index );
+ 	},
 
 	updateSocialMessages: function(item){
 		var twitter = $(document.createElement('a'));

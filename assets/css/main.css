@@ -381,6 +381,12 @@ html{
 	.resultButton{
 		font-size: 12px;
 	}
+	#vraag{
+		display: none;
+	}
+	#resultaat{
+		width: 100%;
+	}
 }
 
 

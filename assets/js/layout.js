@@ -65,8 +65,16 @@ function checkScroll(){
 
 
 $(document).ready(function() {
-	//
+	resizeBigVideos();
+	$(window).resize(function(){
+		resizeBigVideos();
+	});
 });
+
+function resizeBigVideos(){
+	// video hoogtes aanpassen aan hoogte van window:
+	$("#intromovie, #keynotesmovie").height( $(window).height() - 200 );
+}
 
 
 function highlightMenuItem(active){

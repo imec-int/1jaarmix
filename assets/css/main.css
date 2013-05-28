@@ -554,8 +554,6 @@ html{
 /* Moet op't einde komen anders overschrijft het niets :-) */
 @media only screen and (max-device-width: 480px) {
 	#intromovie, #keynotesmovie{
-		width: auto;
-		height: auto;
+		width: auto; /* geen marges voor de videos op smartphone */
 	}
 }
-

@@ -18,7 +18,7 @@ body{
 	font-weight: 300;
 	/*font-family: 'Merriweather Sans', sans-serif;*/
 	background-image: url('/assets/img/background.jpg');
-	background-repeat: repeat-y;
+	background-repeat: repeat-y repeat-x;
 	position: relative;
 }
 
@@ -233,7 +233,7 @@ html{
 		width: 90%;
 	}
 	#projects{
-		height: 2100px;
+		height: 2200px;
 	}
 	.verticalFloater{
 		height: 0%;
@@ -375,8 +375,25 @@ html{
 	font-weight: bold;
 }
 
+@media all and (max-width: 960px) {
+	#vraag h1{
+		font-size: 28px;
+	}
+
+}
+
+@media all and (max-height: 480px),(max-width: 640px){
+	#vraag h1{
+		font-size: 20px;
+	}
+	.resultButton{
+		font-size: 12px;
+	}
+}
+
+
 /*
-	Slides
+	Presentaties
 */
 
 .slide{
@@ -398,10 +415,59 @@ html{
 
 .slide iframe{
 	margin-top: 10px;
+	width: 75%;
+}
+
+.speakerTitle{
+	color: rgb(236,236,236);
+	font-size: 14px;
+}
+
+.sessionTitle{
+	font-size: 21px;
+	margin-top: 30px;
+	font-weight: bold;
+	color: #000;
+	width: 70%;
+}
+
+.sessionSummary{
+	margin-top: 10px;
+	font-style: italic;
+	color: #333;
 	width: 80%;
 }
 
+.moreInfo{
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.moreInfo a{
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.moreInfo a:hover{
+	color: #ccc;
+}
+
+@media all and (max-height: 480px),(max-width: 640px){
+	#slides{
+		height: 1100px;
+	}
+	.slide{
+
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+}
+
 /*  Keynotes */
+
 #keynotesmovie{
 	width: 80%;
 	height: 80%;
@@ -409,6 +475,53 @@ html{
 	margin-right: auto;
 	display: block;
 }
+
+@media all and (max-height: 480px),(max-width: 640px){
+	#keynotesmovie{
+		width: 80%;
+		height: 70%;
+	}
+}
+
+/*  Start mixing  */
+
+#callToAction .contentContainer{
+	margin: 100px;
+}
+
+.communication{
+	margin-left: 20px;
+	color: #fff;
+	font-size: 18px;
+}
+
+.communication img{
+	margin-right: 10px;
+	padding-top: 5px;
+	height: 30px;
+}
+
+.commInfo{
+	font-size: 28px;
+	margin-top: 15px;
+}
+
+.commInfo a{
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.commInfo a:hover{
+	color: #ccc;
+}
+
+@media all and (max-height: 480px),(max-width: 640px){
+	#callToAction .contentContainer{
+		margin: 20px;
+	}
+}
+
 
 /*  SOCIAL  */
 

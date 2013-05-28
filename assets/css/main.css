@@ -245,7 +245,7 @@ html{
 
 /* iPhone CSS rules here */
 @media only screen and (max-device-width: 480px) {
-	#intromovie{
+	#intromovie, #keynotesmovie{
 		width: auto;
 		height: auto;
 	}

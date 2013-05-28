@@ -159,7 +159,7 @@ Results = {
 		Results.updateQuestiontext( data );
 		Results.updateQuestionNumber(Results.index+1);
 		Results.updateSocialMessages( data );
-		window.location.hash = "#results" + Results.index;
+		//window.location.hash = "#results" + Results.index;
 
 		var heightScale = d3.scale.linear()
 			.domain([0, d3.max(data.answers)])

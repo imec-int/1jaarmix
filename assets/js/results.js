@@ -307,10 +307,6 @@ Results = {
 
 		if(typeof(twttr) !== 'undefined' && typeof(twttr.widgets) !== 'undefined')
 			twttr.widgets.load();
-		var gplusone = $(document.createElement('g:plusone'));
-		gplusone.attr('href', "http://www.startmixing.be/#results" + Results.index)
-		$(".gplus").empty();
-		$(".gplus").append(gplusone);
 	},
 
 	next: function (event){

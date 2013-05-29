@@ -556,17 +556,3 @@ html{
 }
 
 
-/* iPhone CSS rules here */
-/* Moet op't einde komen anders overschrijft het niets :-) */
-@media only screen and (max-device-width: 480px) {
-	#intromovie, #keynotesmovie{
-		width: auto; /* geen marges voor de videos op smartphone */
-		height: auto !important;
-	}
-
-	.h2Container h2{
-		font-size: 30px;
-		text-align: left;
-		padding-left: 15px;
-	}
-}

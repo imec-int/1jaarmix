@@ -158,7 +158,7 @@ Results = {
 	drawBars: function(data){
 		Results.updateQuestiontext( data );
 		Results.updateQuestionNumber(Results.index+1);
-		Results.updateSocialMessages( data );
+		// Results.updateSocialMessages( data );
 		//window.location.hash = "#results" + Results.index;
 
 		var heightScale = d3.scale.linear()
@@ -210,7 +210,7 @@ Results = {
 	updateBars: function(data){
 		Results.updateQuestiontext( data );
 		Results.updateQuestionNumber(Results.index+1);
-		Results.updateSocialMessages( data );
+		//Results.updateSocialMessages( data );
 		window.location.hash = "#results" + Results.index;
 
 		var heightScale = d3.scale.linear()
@@ -288,29 +288,25 @@ Results = {
  	},
 
 	updateSocialMessages: function(item){
-		var twitter = $(document.createElement('a'));
-		twitter.attr('href', 'http://twitter.com/share');
-		twitter.attr('class', 'twitter-share-button');
-		twitter.attr('data-url', "http://www.startmixing.be/"+ Results.index+".html#results" + Results.index);
+		// var twitter = $(document.createElement('a'));
+		// twitter.attr('href', 'http://twitter.com/share');
+		// twitter.attr('class', 'twitter-share-button');
+		// twitter.attr('data-url', "http://www.startmixing.be/"+ Results.index+".html#results" + Results.index);
 
-		/*if(item.questiontwitter)
-			twitter.attr('data-text', item.questiontwitter + " www.startmixing.be/#results" + Results.index); // kortere versie
-		else
-			twitter.attr('data-text', item.question +  " www.startmixing.be/#results" + Results.index);
-		*/
-		twitter.attr('data-via', 'mixbe');
-		twitter.attr('data-lang', 'nl');
-		twitter.attr('data-related', 'mixbe');
-		twitter.attr('data-hashtags', '1jaarmix');
-		twitter.innerHTML = "tweet dit";
-		$(".twit").empty();
-		$(".twit").append(twitter);
 
-		if(typeof(twttr) !== 'undefined' && typeof(twttr.widgets) !== 'undefined')
-			twttr.widgets.load();
+		// twitter.attr('data-via', 'mixbe');
+		// twitter.attr('data-lang', 'nl');
+		// twitter.attr('data-related', 'mixbe');
+		// twitter.attr('data-hashtags', '1jaarmix');
+		// twitter.innerHTML = "tweet dit";
+		// $(".twit").empty();
+		// $(".twit").append(twitter);
 
-		//G+ button updaten
-		gapi.plusone.render("gplusContainer", {"href":"http://www.startmixing.be/"+ Results.index+".html#results" + Results.index});
+		// if(typeof(twttr) !== 'undefined' && typeof(twttr.widgets) !== 'undefined')
+		// 	twttr.widgets.load();
+
+		// //G+ button updaten
+		// gapi.plusone.render("gplusContainer", {"href":"http://www.startmixing.be/"+ Results.index+".html#results" + Results.index});
 	},
 
 	next: function (event){

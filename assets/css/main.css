@@ -204,7 +204,7 @@ html{
 	float: left;
 	margin: 1%;
 	width: 23%;
-	height: 240px;
+	height: 100px;
 }
 
 .projectMovie h3{
@@ -219,12 +219,12 @@ html{
 
 @media all and (min-height: 720px){
 	.projectMovie{
-		height: 240px;
+		height: 180px;
 	}
 }
 @media all and (min-height: 550px) and (max-height: 720px){
 	.projectMovie{
-		height: 160px;
+		height: 130px;
 	}
 }
 @media all and (max-width: 650px) {
@@ -233,7 +233,7 @@ html{
 		width: 90%;
 	}
 	#projects{
-		height: 2200px;
+		height: 3200px;
 	}
 	.verticalFloater{
 		height: 0%;

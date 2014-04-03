@@ -17,7 +17,7 @@ body{
              "Helvetica Neue", sans-serif;
 	font-weight: 300;
 	/*font-family: 'Merriweather Sans', sans-serif;*/
-	background-image: url('/assets/img/background.jpg');
+	background-image: url('../img/background.jpg');
 	background-repeat: repeat-y repeat-x;
 	position: relative;
 }
@@ -39,7 +39,7 @@ html{
 }
 
 .h2Container{
-	background-image: url('/assets/img/titel.png');
+	background-image: url('../img/titel.png');
 	background-repeat: no-repeat;
 	background-position: top left;
 	height: 90px;
@@ -253,7 +253,7 @@ html{
 }
 
 #results {
-	background-image: url('/assets/img/background.jpg');
+	background-image: url('../img/background.jpg');
 	height: 100%;
 }
 
@@ -276,7 +276,7 @@ html{
     margin-left: 10%;
     margin-right: auto;
     margin-top: 40px;
-    background-image: url('/assets/img/quote.png');
+    background-image: url('../img/quote.png');
     background-position: top left;
     background-repeat: no-repeat;
 }
@@ -541,17 +541,17 @@ html{
 }
 
 .fb{
-	background-image: url('/assets/img/social/facebook.png');
+	background-image: url('../img/social/facebook.png');
 	background-repeat: no-repeat;
 }
 
 .twit{
-	background-image: url('/assets/img/social/twitter.png');
+	background-image: url('../img/social/twitter.png');
 	background-repeat: no-repeat;
 }
 
 .gplus{
-	background-image: url('/assets/img/social/gplus.png');
+	background-image: url('../img/social/gplus.png');
 	background-repeat: no-repeat;
 }
 

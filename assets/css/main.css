@@ -217,14 +217,24 @@ html{
 	height: 80%;
 }
 
+#projects{
+	height: 900px;
+}
+
 @media all and (min-height: 720px){
 	.projectMovie{
 		height: 180px;
+	}
+	#projects{
+		height: 1350px;
 	}
 }
 @media all and (min-height: 550px) and (max-height: 720px){
 	.projectMovie{
 		height: 130px;
+	}
+	#projects{
+		height: 1000px;
 	}
 }
 @media all and (max-width: 650px) {
@@ -233,7 +243,7 @@ html{
 		width: 90%;
 	}
 	#projects{
-		height: 3200px;
+		height: 4200px;
 	}
 	.verticalFloater{
 		height: 0%;
